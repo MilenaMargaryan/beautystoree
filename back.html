@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="back-style.css" />
+    <title>Отзывы</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="brand-logo">
+                <p class="brand-name">BEAUTY<br /><span class="store-name">STORE</span></p>
+            </div>
+            <button class="menu-toggle">Меню</button> <!-- Кнопка для мобильного меню -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="price.html">Прайс</a></li>
+                <li><a href="back.html">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="notes.html">Запись</a></li>
+            </ul>
+        </div>
+        <div class="notification-bar">
+            <p class="notification-text">ОТЗЫВЫ</p>
+        </div>
+    </nav>
+    <div class="container">
+    <div class="header-section">
+        <h1 class="header-title">Оставьте ваш отзыв</h1>
+        <p class="header-description">
+            Оставьте ваш отзыв после посещения нашего салона.<br />
+            Ваше мнение очень важно для нас!
+        </p>
+    </div>
+</div>
+    <div class="review-container">
+        <div class="review-form">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" id="name" class="form-input" required />
+
+            <label for="phone" class="form-label">Номер телефона</label>
+            <input type="tel" id="phone" class="form-input" required />
+
+            <label for="feedback" class="form-label">Отзыв</label>
+            <textarea id="feedback" class="form-textarea" required></textarea>
+
+            <button class="submit-button">Отправить</button>
+        </div>
+    </div>
+        <div class="reviews-display">
+            <div class="review">
+                <h3 class="review-author">Валерия</h3>
+                <p class="review-text">
+                    На этой неделе посетила салон Beauty Store, была записана на услуги маникюра и стрижки волос. Хочу
+                    отметить невероятную атмосферу, добрый и отзывчивый коллектив, чистоту внутри салона. Все
+                    инструменты были стерильные, а работа была выполнена аккуратно и красиво!
+                </p>
+            </div>
+
+            <div class="review">
+                <h3 class="review-author">Юлия</h3>
+                <p class="review-text">
+                    Я в восторге от сервиса в этом салоне! Сделала стрижку и окрашивание у мастера Анны, и результат
+                    превзошел все ожидания. Она внимательно выслушала все мои пожелания и предложила несколько интересных
+                    идей, что очень порадовало. Атмосфера в салоне очень приятная и расслабляющая. Обязательно вернусь на
+                    следующую процедуру!
+                </p>
+            </div>
+
+            <div class="review">
+                <h3 class="review-author">Екатерина</h3>
+                <p class="review-text">
+                    Посещаю этот салон уже несколько месяцев и осталась довольна. Мастера — настоящие профессионалы своего дела! Делала маникюр и педикюр, и они выдержали все мои капризы. Красота и аккуратность на первом месте!
+                </p>
+            </div>
+
+            <div class="review">
+                <h3 class="review-author">Мария</h3>
+                <p class="review-text">
+                    После посещения солярия в этом салоне моя кожа стала ровного загара и слегка блестящей! Атмосфера здесь очень приятная, персонал дружелюбный и всегда готов помочь. Процедура прошла без неприятных ощущений, а результат просто великолепный! Обязательно вернусь снова!
+                </p>
+            </div>
+        </div>
+
+            <div class="contacts" id="contact">
+                <div class="overlap-7">
+                  <img class="contact-image" src="img/contact-image.png" />
+                 
+                  <div class="contact-title">Контакты</div>
+                  <p class="contact-text">Салон работает ежедневно:<br />пн-сб 10:00-21:00<br />вс 11:00-20:00</p>
+                  <p class="contact-address">
+                    Санкт-Петербург, Невский проспект, д. 148<br />+7 (903) 097-44-77<br />Оплата возможна по QR-коду СБП или
+                    наличными.<br /><br />e-mail: info@beautystore.ru
+                  </p> 
+                  <div class="footer-bar">
+                    <div class="footer-text">© 2024 Beauty Store</div>
+                    <div class="footer-policifity">*Политика конфеденциальности</div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+          const navContainer = document.querySelector('.nav-container');
+      
+          menuToggle.addEventListener('click', () => {
+              navContainer.classList.toggle('active'); // Переключаем класс активного состояния
+          });
+          </script>
+    
+</body>
+</html>

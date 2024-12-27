@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes-style.css">
+    <title>Форма регистрации</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="brand-logo">
+                <p class="brand-name">BEAUTY<br /><span class="store-name">STORE</span></p>
+            </div>
+            <button class="menu-toggle">Меню</button> <!-- Кнопка для мобильного меню -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="price.html">Прайс</a></li>
+                <li><a href="back.html">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="notes.html">Запись</a></li>
+            </ul>
+        </div>
+        <div class="notification-bar">
+            <p class="notification-text">ОНЛАЙН ЗАПИСЬ</p>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h1>Запись на процедуру</h1>
+        <form class="registration-form">
+            <label for="first-name">Имя:</label>
+            <input type="text" id="first-name" name="first-name" required />
+
+            <label for="last-name">Фамилия:</label>
+            <input type="text" id="last-name" name="last-name" required />
+
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="procedure">Процедура:</label>
+            <input type="text" id="procedure" name="procedure" required />
+
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required />
+
+            <label for="type">Тип процедуры:</label>
+            <input type="text" id="type" name="type" required />
+
+            <button type="submit">Записаться</button>
+        </form>
+</div>
+
+    <div class="container">
+        <div class="header-section">
+            <p class="header-description"></p>
+            Запишитесь на процедуру легко и быстро прямо на нашем сайте, заполнив форму!<br />
+            В течении 15 минут после заполнения с вами свяжется администратор для подтверждения записи.
+        </p>
+        </div>
+    </div>
+    
+
+    <div class="contacts" id="contact">
+        <div class="overlap-7">
+          <img class="contact-image" src="img/contact-image.png" />
+         
+          <div class="contact-title">Контакты</div>
+          <p class="contact-text">Салон работает ежедневно:<br />пн-сб 10:00-21:00<br />вс 11:00-20:00</p>
+          <p class="contact-address">
+            Санкт-Петербург, Невский проспект, д. 148<br />+7 (903) 097-44-77<br />Оплата возможна по QR-коду СБП или
+            наличными.<br /><br />e-mail: info@beautystore.ru
+          </p> 
+          <div class="footer-bar">
+            <div class="footer-text">© 2024 Beauty Store</div>
+            <div class="footer-policifity">*Политика конфеденциальности</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+  const navContainer = document.querySelector('.nav-container');
+
+  menuToggle.addEventListener('click', () => {
+      navContainer.classList.toggle('active'); // Переключаем класс активного состояния
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Галерея Beauty Store</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="brand-logo">
+                <p class="brand-name">BEAUTY<br /><span class="store-name">STORE</span></p>
+            </div>
+            <button class="menu-toggle">Меню</button> <!-- Кнопка для мобильного меню -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="price.html">Прайс</a></li>
+                <li><a href="back.html">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="notes.html">Запись</a></li>
+            </ul>
+        </div>
+        <div class="header-content">
+          <img src="img/banner-image.png" alt="Beauty Store" class="header-image" />
+          <div class="header-text">
+              <h1>BEAUTY STORE</h1>
+              <p class="subtitle">- сеть салонов красоты в Санкт-Петербурге. Выберите необходимые вам услуги и наслаждайтесь преображением.</p>
+              <button class="choose-procedure">Выбрать процедуру</button>
+          </div>
+      </div>
+    </nav>
+    <main>
+      <section id="services" class="procedures">
+        <h2>Процедуры салона</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/block-image.png" alt="Haircut" />
+                <h3>Стрижки и окрашивания</h3>
+                <a href="price.html" class="price-button">от 750 руб</a>
+            </div>
+            <div class="card">
+                <img src="img/block-image2.png" alt="Manicure" />
+                <h3>Маникюр и покрытие</h3>
+                <a href="price.html" class="price-button">от 900 руб</a>
+            </div>
+            <div class="card">
+                <img src="img/block-image3.png" alt="Makeup" />
+                <h3>Макияж</h3>
+                <a href="price.html" class="price-button">от 1500 руб</a>
+            </div>
+            <div class="card">
+                <img src="img/block-image4.png" alt="Solarium" />
+                <h3>Солярий</h3>
+                <a href="price.html" class="price-button">от 80 руб</a>
+            </div>
+        </div>
+        </div>
+        <a href="notes.html" class="sign-up">
+            Записаться →
+        </a>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <h2>Галерея наших работ</h2>
+        <div class="tabs">
+            <button class="tab active" data-filter="cuts">Стрижки</button>
+            <button class="tab" data-filter="dyes">Окрашивания</button>
+            <button class="tab" data-filter="manicure">Маникюр</button>
+            <button class="tab" data-filter="makeup">Макияж</button>
+        </div>
+        <script src="home.js"></script>
+        <div class="gallery-carousel">
+            <button class="prev">&#9664;</button>
+    
+            <!-- Изображения для стрижек -->
+            <img src="img/cuts1.jpg" alt="Стрижка 1" class="gallery-image active cuts" />
+            <img src="img/cuts2.png" alt="Стрижка 2" class="gallery-image cuts" />
+    
+            <!-- Изображения для окрашиваний -->
+            <img src="img/gallery-image.png" alt="Окрашивание 1" class="gallery-image dyes" />
+            <img src="img/dyes2.png" alt="Окрашивание 2" class="gallery-image dyes" />
+            <img src="img/dyes3.png" alt="Окрашивание 3" class="gallery-image dyes" />
+            <img src="img/dyes4.png" alt="Окрашивание 4" class="gallery-image dyes" />
+    
+            <!-- Изображения для маникюра -->
+            <img src="img/manicure1.png" alt="Маникюр 1" class="gallery-image manicure" />
+            <img src="img/manicure2.png" alt="Маникюр 2" class="gallery-image manicure" />
+            <img src="img/manicure3.png" alt="Маникюр 3" class="gallery-image manicure" />
+    
+            <!-- Изображения для макияжа -->
+            <img src="img/makeup1.jpg" alt="Макияж 1" class="gallery-image makeup" />
+            <img src="img/makeup2.jpg" alt="Макияж 2" class="gallery-image makeup" />
+            <img src="img/makeup3.jpg" alt="Макияж 3" class="gallery-image makeup" />
+    
+            <button class="next">&#9654;</button>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="contacts" id="contact">
+            <div class="overlap-7">
+              <img class="contact-image" src="img/contact-image.png" />
+             
+              <div class="contact-title">Контакты</div>
+              <p class="contact-text">Салон работает ежедневно:<br />пн-сб 10:00-21:00<br />вс 11:00-20:00</p>
+              <p class="contact-address">
+                Санкт-Петербург, Невский проспект, д. 148<br />+7 (903) 097-44-77<br />Оплата возможна по QR-коду СБП или
+                наличными.<br /><br />e-mail: info@beautystore.ru
+              </p> 
+              <div class="footer-bar">
+                <div class="footer-text">© 2024 Beauty Store</div>
+                <div class="footer-policifity">*Политика конфеденциальности</div>
+              </div>
+            </div>
+          </div>  
+    </footer>  
+    <script>
+        document.querySelector('.choose-procedure').addEventListener('click', function() {
+            const procedures = document.querySelector('.procedures');
+            if (procedures) {
+                procedures.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+    <script>
+          const menuToggle = document.querySelector('.menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
+
+    menuToggle.addEventListener('click', () => {
+        navContainer.classList.toggle('active'); // Переключаем класс активного состояния
+    });
+    </script>
+</body>
+</html>

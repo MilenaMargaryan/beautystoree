@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.nav-container {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    width: 100%; /* Используем 100% ширину для контейнера навигации */
+    height: 68px;
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Вертикальное центрирование */
+    padding: 10px 20px;
+}
+
+.brand-name {
+    color: #000;
+    text-align: center;
+    font-family: 'jsMath-cmbx10', sans-serif; /* Добавьте запасной шрифт */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0; /* Удаляем отступы */
+    margin-left: 50px;
+}
+
+.store-name {
+    color: #CB42C9;
+    font-family: 'jsMath-cmbx10', sans-serif; /* Добавьте запасной шрифт */
+    font-size: 24px;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin: 0; /* Удаляйте отступы по умолчанию */
+    padding: 0; /* Удаляйте отступы по умолчанию */
+    display: flex; /* Используем flex для горизонтального выравнивания элементов меню */
+    margin-left: 850px;
+}
+
+li {
+    margin-right: 20px; /* Отступ между пунктами меню */
+}
+
+a {
+    color: #000;
+    text-align: center;
+    font-family: 'Josefin Slab', sans-serif; /* Добавьте запасной шрифт */
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline; /* Подчёркиваем текст */
+}
+
+.nav-menu {
+  list-style: none; /* Убираем маркеры списка */
+  display: flex; /* Отображение в строку */
+  flex-grow: 1; /* Дает возможность меню занимать доступное пространство */
+  justify-content: center; /* Центрирует элементы */
+  margin: 0; /* Убираем отступы по умолчанию */
+  padding: 0; /* Убираем отступы по умолчанию */
+}
+
+.nav-menu li {
+  margin: 0 15px; /* Отступы между элементами списка */
+}
+
+.nav-menu a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #000; /* Цвет текста */
+}
+
+/* Адаптация для мобильных устройств */
+.menu-toggle {
+  display: none; /* Скрыть меню по умолчанию */
+  font-size: 18px; /* Размер шрифта для кнопки меню */
+  background-color: #CB42C9; /* Цвет фона кнопки */
+  color: white; /* Цвет текста на кнопке */
+  border: none; /* Убираем рамку */
+  border-radius: 5px; /* Скругленные углы */
+  cursor: pointer; /* Указатель при наведении */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .nav-menu {
+      justify-content: flex-start; /* Сдвигаем меню к началу */
+      flex-wrap: wrap; /* Разрешаем перенос элементов */
+  }
+
+  .nav-menu li {
+      flex: 1 1 auto; /* Позволяем элементам сжиматься */
+      text-align: center; /* Центрируем текст */
+  }
+
+  .menu-toggle {
+      display: block; /* Показываем кнопку меню на мобильных устройствах */
+  }
+
+  .nav-menu {
+      display: none; /* Скрыть меню на мобильных устройствах */
+      flex-direction: column; /* Вертикальное расположение элементов */
+      position: absolute; /* Позволяет разместить меню */
+      background-color: #fff; /* Цвет фона для мобильного меню */
+      top: 60px; /* Позиционирование меню */
+      right: 20px; /* Положение меню справа */
+      width: 200px; /* Ширина мобильного меню */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для меню */
+  }
+
+  .nav-container.active .nav-menu {
+      display: flex; /* Отображаем меню при активированном состоянии */
+  }
+}
+
+.notification-bar {
+  width: 100%; /* Полоска занимает всю ширину экрана */
+  background-color: #1b1d1f; /* Цвет фона полоски */
+  color: white; /* Цвет текста полоски */
+  text-align: center; /* Центрируем текст */
+  padding: 10px 0; /* Внутренние отступы вверх и вниз */
+}
+
+.notification-text {
+  margin: 0; /* Убираем отступы у текста */
+  font-size: 35px; /* Размер шрифта для текста */
+  font-weight: bold;
+}
+
+.contacts {
+position: relative; /* Заменяем absolute на relative для более удобного позиционирования */
+width: 100%; /* Задаем ширину на 100% */
+height: auto; /* Высота будет зависеть от контента */
+background-color: #ffffff; /* Белый фон */
+}
+
+.overlap-7 {
+
+background-color: #d9d9d9; /* Серый фон для этой секции */
+
+}
+
+.contact-image {
+width: 350px; /* Ширина изображения */
+height: auto; /* Высота будет изменяться автоматически */
+object-fit: cover; /* Сохраняем пропорции изображения */
+margin-bottom: 20px; /* Отступ снизу */
+float: right; /* Выровнять по правому краю */
+margin-left: 20px; /* Отступ слева, чтобы текст не был вплотную к изображению */
+margin-right: 100px;
+margin-top: 50px;
+}
+
+
+.footer-text {
+
+font-family: "Afacad-SemiBold", Helvetica;
+font-weight: 600;
+font-size: 20px;
+color: #ffffff;
+text-align:center;
+margin-bottom: 20px ;
+
+}
+
+.footer-policifity {
+font-family: "Afacad-Regular", Helvetica;
+font-weight: 400;
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+
+
+}
+
+.contact-title {
+font-family: "Afacad-Bold", Helvetica;
+font-weight: 700;
+color: #000000;
+font-size: 35px;
+text-align: left;
+margin-top: 100px;
+margin-left: 100px;
+}
+
+.contact-text, .contact-address {
+font-family: "Afacad-Medium", Helvetica;
+font-weight: 500;
+color: #424242;
+font-size: 25px;
+line-height: 1.5; /* Задаем межстрочный интервал */
+width: 100%; /* Чтобы текст занимал 100% ширины контейнера */
+max-width: 600px; /* Задаем максимальную ширину */
+text-align: left; /* Убираем позиционирование и делаем текст по центру */
+margin-left: 100px;
+}
+
+.footer-bar {
+  width: 100%; /* Полоска занимает всю ширину экрана */
+  height: 100px;
+  background-color: #1b1d1f; /* Цвет фона полоски */
+  color: white; /* Цвет текста полоски */
+
+}
+  
+.form-container {
+  max-width: 600px; /* Максимальная ширина формы */
+  margin: right;
+  margin-left: 50px;
+  margin-top: 50px;
+  padding: 20px; /* Внутренние отступы */
+  background-color: #f9f9f9; /* Светлый фон для формы */
+  border-radius: 8px; /* Скругление углов формы */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+}
+
+h1 {
+  font-family: "Afacad-Bold", Helvetica; /* Шрифт заголовка */
+  font-size: 28px; /* Размер шрифта заголовка */
+  color: #333; /* Цвет заголовка */
+  text-align: center; /* Центрирование заголовка */
+  margin-bottom: 20px; /* Отступ снизу заголовка */
+}
+
+.registration-form {
+  display: flex; /* Используем Flexbox для управления элементами формы */
+  flex-direction: column; /* Располагаем элементы в колонку */
+}
+
+label {
+  font-family: "Afacad-Regular", Helvetica; /* Шрифт для меток */
+  font-size: 16px; /* Размер шрифта меток */
+  color: #424242; /* Цвет меток */
+  margin-bottom: 5px; /* Отступ снизу меток */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"] {
+  padding: 10px; /* Внутренние отступы */
+  margin-bottom: 15px; /* Отступ снизу для полей ввода */
+  border: 1px solid #ddd; /* Светлая рамка вокруг полей */
+  border-radius: 5px; /* Скругление углов для полей ввода */
+  font-size: 16px; /* Размер шрифта для полей ввода */
+}
+
+button {
+  padding: 10px; /* Внутренние отступы для кнопки */
+  background-color: #b419b9; /* Цвет фона кнопки */
+  color: white; /* Цвет текста на кнопке */
+  border: none; /* Убираем рамку у кнопки */
+  border-radius: 5px; /* Скругление углов для кнопки */
+  font-size: 18px; /* Размер шрифта для кнопки */
+  cursor: pointer; /* Указатель курсора при наведении */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+  background-color: #87128b; /* Более темный цвет при наведении */
+}
+
+.container {
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Горизонтально выравниваем содержимое по центру */
+  align-items: center; /* Вертикально выравниваем содержимое по центру */
+  width: 50%; /* Задаем ширину контейнера 50% */
+  position: absolute; /* Позволяем контейнеру позиционироваться */
+  right: 0; /* Выровнять правую сторону экрана */
+  top: 170px; /* Прилипает к верхней части страницы */
+  height: 50%; /* Высота контейнера 100% от высоты экрана */
+  font-size: 30px; /* Размер шрифта заголовка */
+  font-family: Arial, sans-serif;
+}
+
+.header-section {
+  text-align: center; /* Центруем текст внутри секции */
+}
+
+
+.header-description {
+  margin: 5px 0 0; /* Отступы для описания */
+  color: #666; /* Цвет шрифта описания */
+
+}
+  
